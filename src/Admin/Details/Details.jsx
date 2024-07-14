@@ -46,9 +46,7 @@ const Details = () => {
             variant="contained"
             color={restaurant.usersRestaurant?.open ? "error" : "primary"}
           >
-            {restaurant.usersRestaurant?.open
-              ? "Close"
-              : "Open"}
+            {restaurant.usersRestaurant?.open ? "Close" : "Open"}
           </Button>
         </div>
       </div>
@@ -197,7 +195,7 @@ const Details = () => {
                     <a
                       className="ml-5"
                       href={
-                        restaurant.usersRestaurant?.contactInformation.instagram
+                        restaurant.usersRestaurant?.contactInformation.twitter
                       }
                       target="_blank"
                       rel="noreferrer"
@@ -207,7 +205,7 @@ const Details = () => {
                     <a
                       className="ml-5"
                       href={
-                        restaurant.usersRestaurant?.contactInformation.instagram
+                        restaurant.usersRestaurant?.contactInformation.linkedin
                       }
                       target="_blank"
                       rel="noreferrer"
@@ -217,7 +215,7 @@ const Details = () => {
                     <a
                       className="ml-5"
                       href={
-                        restaurant.usersRestaurant?.contactInformation.instagram
+                        restaurant.usersRestaurant?.contactInformation.facebook
                       }
                       target="_blank"
                       rel="noreferrer"
