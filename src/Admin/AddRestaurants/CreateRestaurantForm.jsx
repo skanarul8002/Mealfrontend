@@ -48,6 +48,8 @@ const CreateRestaurantForm = () => {
         mobile: values.mobile,
         twitter: values.twitter,
         instagram: values.instagram,
+        linkedin: values.linkedin,
+        facebook: values.facebook,
       },
       openingHours: values.openingHours,
       images: values.images,
@@ -92,16 +94,15 @@ const CreateRestaurantForm = () => {
                 onChange={handleImageChange}
               />
 
-              
               <label className="relative" htmlFor="fileInput">
                 <span className="w-24 h-24 cursor-pointer flex items-center justify-center p-3 border rounded-md border-gray-600">
-                  <AddPhotoAlternateIcon
-                    className="text-white"
-                  />
+                  <AddPhotoAlternateIcon className="text-white" />
                 </span>
-                {uploadImage && <div className="absolute left-0 right-0 top-0 bottom-0 w-24 h-24 flex justify-center items-center">
-                <CircularProgress />
-                </div>}
+                {uploadImage && (
+                  <div className="absolute left-0 right-0 top-0 bottom-0 w-24 h-24 flex justify-center items-center">
+                    <CircularProgress />
+                  </div>
+                )}
               </label>
 
               <div className="flex flex-wrap gap-2">
@@ -273,7 +274,28 @@ const CreateRestaurantForm = () => {
                 value={formik.values.instagram}
               />
             </Grid>
-            
+            <Grid item xs={6}>
+              <TextField
+                fullWidth
+                id="linkedin"
+                name="linkedin"
+                label="LinkedIn"
+                variant="outlined"
+                onChange={formik.handleChange}
+                value={formik.values.linkedin}
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                fullWidth
+                id="facebook"
+                name="facebook"
+                label="Facebook"
+                variant="outlined"
+                onChange={formik.handleChange}
+                value={formik.values.facebook}
+              />
+            </Grid>
           </Grid>
           <Button variant="contained" color="primary" type="submit">
             Create Restaurant
